@@ -1,0 +1,329 @@
+:root {
+    --primary: #00C853;
+    --secondary: #64DD17;
+    --neutro: #1B1F23;
+    --text: #E0E0E0;
+    --buttons: #00E676;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100svh;
+    background-color: var(--neutro);
+}
+
+header {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 0px 10px #000;
+    z-index: 999;
+}
+
+header * {
+    font-family: monospace;
+}
+
+header h1 {
+    font-size: 30pt;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+}
+
+header ul a {
+    font-size: 12pt;
+    border: 2px solid var(--text);
+    padding: 10px 4px;
+    transition: .2s;
+}
+
+header ul a:hover {
+    color: #fff;
+    background-color: var(--text);
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0px #0007;
+}
+
+header ul a:active {
+    transform: translate(0px, 0px);
+    box-shadow: 0px 0px 0px #0007;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+#hero-banner {
+    height: 100svh;
+    padding: 0px;
+
+    background-image: url('./images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    perspective: 800px;
+}
+
+#hero-banner div {
+    background-color: #0009;
+    backdrop-filter: blur(5px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#hero-banner div h1 {
+    font-size: 50pt;
+}
+
+#hero-banner div a {
+    background-color: var(--buttons);
+    padding: 10px 20px;
+    font-size: 20pt;
+    transition: .2s;
+}
+
+#hero-banner div a:hover {
+    padding: 10px 100px;
+}
+
+#sobre-nos {
+    height: 100svh;
+    display: flex;
+    gap: 20px;
+}
+
+#sobre-nos div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#sobre-nos div h1 {
+    font-size: 30pt;
+}
+
+#sobre-nos img {
+    padding: 50px;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 69% 31% 57% 43% / 36% 55% 45% 64%;
+    transition: .5s;
+
+    animation: main-image 15s infinite ease-in-out;
+}
+
+#oferecimentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#oferecimentos h1 {
+    font-size: 25pt;
+}
+
+#oferecimentos #grid {
+    display: flex;
+    gap: 20px;
+}
+
+#oferecimentos #grid div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+#oferecimentos #grid div img {
+    width: 90%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50% 50% 65% 35% / 36% 63% 37% 64%;
+}
+
+
+#solucoes {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#solucoes  h1 {
+    font-size: 25pt;
+}
+
+#solucoes ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+#solucoes ul li {
+    background-color: var(--primary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#solucoes ul li p {
+    color: var(--neutro);
+}
+
+
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+    padding: 20px;
+    gap: 10px;
+    width: 500px;
+    align-items: center;
+}
+
+#contato form input, #contato form textarea {
+    background-color: var(--neutro);
+    padding: 10px;
+    border-radius: 3px;
+    width: 100%;
+}
+
+#contato form textarea {
+    width: 100%!important;
+    height: 200px!important;
+    resize: none;
+}
+
+#contato form button {
+    background-color: var(--buttons);
+    width: 80%;
+    padding: 10px;
+    color: var(--neutro);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+footer ul a {
+    color: var(--primary);
+}
+
+
+@keyframes main-image {
+    0% {
+        transform: translate(0px,0px) rotate(2deg);
+    }
+    25% {
+        transform: translate(4px,-4px) rotate(-2deg);
+    }
+    50% {
+        transform: translate(4px,4px) rotate(1deg);
+    }
+    75% {
+        transform: translate(-4px,4px) rotate(-2deg);
+    }
+    0% {
+        transform: translate(0px,0px) rotate(0deg);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #solucoes {
+        align-items: center;
+    }
+    #solucoes ul {
+        flex-direction: column;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #oferecimentos #grid {
+        flex-direction: column;
+    }
+    #oferecimentos #grid div {
+        align-items: center;
+    }
+    #oferecimentos #grid div img {
+        width: 100%;
+        border-radius: 0%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #oferecimentos #grid div img {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #sobre-nos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sobre-nos img {
+        width: 100%;
+        height: auto;
+    }
+}
