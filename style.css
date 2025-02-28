@@ -289,6 +289,9 @@ footer ul a {
         flex-direction: column;
         width: 70%;
     }
+    #hero-banner div h1 {
+        font-size: 30pt;
+    }
 }
 
 @media screen and (max-width: 700px) {
