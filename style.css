@@ -289,9 +289,6 @@ footer ul a {
         flex-direction: column;
         width: 70%;
     }
-    #hero-banner div h1 {
-        font-size: 30pt;
-    }
 }
 
 @media screen and (max-width: 700px) {
@@ -310,6 +307,12 @@ footer ul a {
     #oferecimentos #grid div img {
         width: 100%;
         border-radius: 0%;
+    }
+    #hero-banner div h1 {
+        font-size: 20pt;
+    }
+    header h1 {
+        font-size: 20pt;
     }
 }
 
